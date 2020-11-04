@@ -1,0 +1,15 @@
+version: "3.8"  
+
+services:
+    cresi:
+        build: .
+        image: "cresi"
+        ports:
+            - "9111:9111"
+            - "6006:6006"
+        stdin_open: true 
+        tty: true
+        volumes:
+            - ..:/home/solaris
+        command: jupyter notebook --ip=0.0.0.0 --port=9111 --allow-root
+        shm_size: '8gb'

@@ -10,6 +10,6 @@ services:
         stdin_open: true 
         tty: true
         volumes:
-            - .:/home/solaris
+            - ..:/home/solaris
         command: jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root
     
